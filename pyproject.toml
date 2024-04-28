@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "reproduce"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+camelot-py = "^0.11.0"
+pandas = "^2.2.2"
+mysql-connector = "^2.2.9"
+opencv-python = "^4.9.0.80"
+ghostscript = "^0.7"
+pymysql = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

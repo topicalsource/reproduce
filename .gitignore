@@ -1,0 +1,7 @@
+.DS_Store
+.vscode/
+.dolt/
+dl/
+tmp/
+
+__pycache__/
