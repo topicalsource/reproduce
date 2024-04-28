@@ -92,7 +92,7 @@ def extend_from_sql():
 
   engine = create_engine(DB_CONN)
   query = f"""
-  SELECT fiscal_year, year, month, region as sector, area_of_responsibility as region, encounter_count as count
+  SELECT fiscal_year, year, month, area_of_responsibility as sector, region, encounter_count as count
   FROM nationwide_encounters_aor
     WHERE encounter_type != "Inadmissibles"
       AND fiscal_year >= {mft['year']}
@@ -108,14 +108,14 @@ def extend_from_sql():
     for d in ds:
       d = dict(d)
       # clean area of responsibility
-      a = d["region"]
+      a = d["sector"]
       if "Field Office" in a:
         a = a[:-13]
       if "Sector" in a:
         a = a[:-7]
       d["year"] = int(d["year"])
-      d["region"] = a
-      d["sector"] = Regions[a] + " Border"
+      d["sector"] = a
+      d["region"] = Regions[a] + " Border"
       data.append(d)
 
 

@@ -14,6 +14,11 @@ mysql-connector = "^2.2.9"
 opencv-python = "^4.9.0.80"
 ghostscript = "^0.7"
 pymysql = "^1.1.0"
+numpy = "^1.26.4"
+scipy = "^1.13.0"
+plotly = "^5.21.0"
+jupyterlab = "^4.1.8"
+notebook = "^7.1.3"
 
 
 [build-system]

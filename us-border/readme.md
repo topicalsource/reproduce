@@ -38,13 +38,19 @@ See the `./schemas/` directory or
 
 ### dolt setup
 
+Do this if you have not cloned the dolt database directly.
+
 ```sh
 # init clean database
 dolt init
 
 # apply schemas
 dolt sql < schemas/*.sql
+```
 
+Serve dolt as a MySQL server
+
+```sh
 # run server
 dolt sql-server -u ts -p ts -H 0.0.0.0
 ```
