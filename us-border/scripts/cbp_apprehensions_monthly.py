@@ -39,6 +39,7 @@ def fill_from_pdf():
     orig = orig.iloc[:-1, :-1]
     # remove commas from numbers
     orig.replace(',','', regex=True, inplace=True)
+    # print(orig)
 
     # reshape, loop over rows (geography)
     for _, row in orig[1:].iterrows():
@@ -55,7 +56,7 @@ def fill_from_pdf():
       region = Regions[sector] + " Border"
 
       # for each column (month)
-      for c in range(1,12):
+      for c in range(1,13):
         fiscal_year = 2000+page
         # year & correction
         year = fiscal_year
